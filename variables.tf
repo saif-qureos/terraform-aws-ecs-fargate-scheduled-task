@@ -116,3 +116,9 @@ variable "event_target_ecs_target_propagate_tags" {
   type        = string
   default     = ""
 }
+
+variable "launch_type" {
+  description = "(Required) Specifies whether to use FARGATE or FARGATE_SPOT launch type for the schedulled task."
+  type        = string
+  default     = "FARGATE"
+}

@@ -65,7 +65,7 @@ resource "aws_cloudwatch_event_target" "ecs_scheduled_task" {
 
   ecs_target {
     group               = var.event_target_ecs_target_group
-    launch_type         = "FARGATE"
+    launch_type         = var.launch_type
     platform_version    = var.event_target_ecs_target_platform_version
     task_count          = var.event_target_ecs_target_task_count
     task_definition_arn = var.event_target_ecs_target_task_definition_arn
